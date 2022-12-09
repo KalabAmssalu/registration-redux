@@ -4,15 +4,20 @@ import Name from "./store/action/firstAction";
 import Lname from "./store/action/lastAction";
 import Gender from "./store/action/genderAction";
 import Profession from "./store/action/professionAction";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import Input from "./Components/input";
+import FirstName from "./Components/FirstName";
+import LastName from "./Components/LastName";
+import Ageme from "./Components/Age";
+import GenderComponent from "./Components/Gender";
+import ProfessionComponent from "./Components/ProfessionAction";
 
 function App() {
-  const firstName = useSelector((state) => state.firstName);
-  const lastName = useSelector((state) => state.lastName);
-  const gender = useSelector((state) => state.gender);
-  const age = useSelector((state) => state.age);
-  const profession = useSelector((state) => state.profession);
+  // const firstName = useSelector((state) => state.firstName);
+  // const lastName = useSelector((state) => state.lastName);
+  //const gender = useSelector((state) => state.gender);
+  //const age = useSelector((state) => state.age);
+  //const profession = useSelector((state) => state.profession);
 
   const dispatch = useDispatch();
 
@@ -72,12 +77,22 @@ function App() {
               btnTitle='profession'
               dispatchFunction={dispatchFunction}
             />
-            <div>
-              <p>FirstName: {firstName}</p>
-              <p>LastName: {lastName}</p>
-              <p>gender: {gender}</p>
-              <p>age: {age}</p>
-              <p>profession: {profession}</p>
+            <div className='border-white border-2 p-6 text-xl mt-12 '>
+              <div>
+                <FirstName />
+              </div>
+              <div>
+                <LastName />
+              </div>
+              <div>
+                <Ageme />
+              </div>
+              <div>
+                <GenderComponent />
+              </div>
+              <div>
+                <ProfessionComponent />
+              </div>
             </div>
           </div>
         </div>

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-const Input = (props) => {
+const Input = ({ title, btnTitle, dispatchFunction }) => {
   const [value, setValue] = useState("");
   return (
     <div>
       <div className='flex flex-row p-2 gap-3'>
         <label htmlFor='name' className='items-center font-bold w-32'>
           {" "}
-          {props.title}:
+          {title}:
         </label>
         <input
           type='text'
@@ -17,7 +17,7 @@ const Input = (props) => {
         />
         <button
           className='w-32 bg-gray-500 items-center '
-          onClick={() => props.dispatchFunction(props.btnTitle, value)}>
+          onClick={() => dispatchFunction(btnTitle, value)}>
           {" "}
           ADD{" "}
         </button>

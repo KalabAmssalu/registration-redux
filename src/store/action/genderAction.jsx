@@ -1,7 +1,7 @@
-const Gender = (Mname) => {
+const Gender = (gender) => {
   return {
     type: "GENDER",
-    payload: Gender,
+    payload: gender,
   };
 };
 
